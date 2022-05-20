@@ -38,12 +38,7 @@ console.log('Test - should multiply three numbers:', multiplyThree(3, 4, 5));
 // 5. Function that will return true if a number is positive, 
 //    or greater than zero, and false otherwise
 function isPositive(number) {
-  if ( number > 0 ) {
-    return true;
-  }
-  else {
-    return false;
-  }
+  return (number > 0 ? true : false);
 }
 
 // Call the function to test each outcome (true & false) 
@@ -106,9 +101,9 @@ console.log('Test - finding sum in array:', sumAll(numberArray));
 //     return an empty array. Note: The input array should not change.
 const numArray = [0, -3, -1, 4, 6, 8]
 function allPositiveNumbers(numArray) {
-  return newArray = numArray.filter((numArray) => numArray.length > 0);
+  return numArray.filter((numArray) => numArray.length > 0);
 }
-console.log('Test - creating new positive array:', allPositiveNumbers(numArray), newArray);
+console.log('Test - creating new positive array:', allPositiveNumbers(numArray));
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or 
 //     CodeWars(https://www.codewars.com/). Then describe it 
