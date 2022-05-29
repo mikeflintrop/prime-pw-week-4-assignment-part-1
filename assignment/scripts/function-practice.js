@@ -14,7 +14,7 @@ console.log('Test - should say "Hello World!"', hello());
 
 // 2. Function to return an personalized hello, using the `name` argument.
 //    for example 'Hello, Jo!', or 'Hello, Stacy!'
-let name = 'John';
+const name = 'John';
 function helloName(name) {
   return `Hello, ${name}!`;
 }
@@ -38,7 +38,7 @@ console.log('Test - should multiply three numbers:', multiplyThree(3, 4, 5));
 // 5. Function that will return true if a number is positive, 
 //    or greater than zero, and false otherwise
 function isPositive(number) {
-  return (number > 0 ? true : false);
+  return number > 0 ? true : false;
 }
 
 // Call the function to test each outcome (true & false) 
@@ -60,16 +60,15 @@ console.log('Test - last item of array:', getLast(animalsArray));
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
 
-let value = 'snakes'
+const value = 'fish'
 function find(value, animalsArray){
   for (let i = 0; i < animalsArray.length; i++) {
+    // console.log(animalsArray[i])
     if (animalsArray[i] === value) {
     return true;
     }
-    else {
-    return false;
-    }
   }
+  return false;
 }
 console.log('Test - finding value in array:', find(value, animalsArray));
 
@@ -90,9 +89,11 @@ console.log( 'isFirstLetter - should say false', isFirstLetter('z', 'apple') );
 let numberArray = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 function sumAll(numberArray) {
   let sum = 0;
-  for (let i = 0; i < numberArray.length; sum += (numberArray[i++])); {
-  return sum;
+  for (let i = 0; i < numberArray.length; i++) {
+    sum += numberArray[i]; {
+    }
   }
+  return sum;
 }
 console.log('Test - finding sum in array:', sumAll(numberArray));
 
@@ -101,7 +102,7 @@ console.log('Test - finding sum in array:', sumAll(numberArray));
 //     return an empty array. Note: The input array should not change.
 const numArray = [0, -3, -1, 4, 6, 8]
 function allPositiveNumbers(numArray) {
-  return numArray.filter((numArray) => numArray.length > 0);
+  return numArray.filter((num) => num > 0)
 }
 console.log('Test - creating new positive array:', allPositiveNumbers(numArray));
 
